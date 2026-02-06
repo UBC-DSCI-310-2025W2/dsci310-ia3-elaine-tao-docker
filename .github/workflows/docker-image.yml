@@ -22,8 +22,8 @@ jobs:
     - name: Login to Dockerhub
       uses: docker/login-action@v3
       with:
-        username: ${{ secrets.dockerhub_username }}
-        password: ${{ secrets.dockerhub_password }}
+        username: ${{ secrets.docker_username }}
+        password: ${{ secrets.docker_password }}
       
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag elainetao/rdocker-cowsay:$(date +%s)
