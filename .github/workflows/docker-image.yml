@@ -26,7 +26,7 @@ jobs:
         password: ${{ secrets.docker_password }}
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag elainetao/rdocker-cowsay:$(date +%s)
+      run: docker build . --file Dockerfile --tag elainetao/dockerfile-practice:$(date +%s)
 
     - name: Push the Docker image
-      run: docker push elainetao/rdocker-cowsay
+      run: docker push elainetao/dockerfile-practice
